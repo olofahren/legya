@@ -1,6 +1,3 @@
-
-
-console.log("katt");
 var tempItems = [];   //declare an array
 
 function addItem(){
@@ -23,6 +20,11 @@ function addItemClick(){
     tempItems.push(itemId); //put to the array
     console.log(tempItems);
     document.getElementById('itemIdInput').value = '';
+}
+
+function uploadItems(){
+
+    document.getElementById("searchField").value = tempItems;
 }
 
 
