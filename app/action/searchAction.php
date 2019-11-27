@@ -1,10 +1,10 @@
 <?php
 session_start();
-include("../conn.php");
+//include("../conn.php");
 
 //WARNING!!!!
-//ADD mysql_real_escape_string()
-$searchKeys = mysql_real_escape_string($_POST["key"]);
+//ADD mysql_real_escape_string() or OTHER similar method
+$searchKeys = $_POST["key"];
 
 $keyWords = explode(",",$searchKeys);
 

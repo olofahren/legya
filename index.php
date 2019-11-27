@@ -37,7 +37,10 @@ $_SESSION["items"];
                         </div>
                     </form>
             </div>
-            <div class="brick-list">
+            <div class="list-container">
+                <ul id="brick-list">
+
+                </ul>
             </div>
         </div>
     </div>
