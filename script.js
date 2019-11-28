@@ -10,7 +10,6 @@ document.getElementById('itemIdInput').onkeydown = function(e){
             console.log(tempItems);
             document.getElementById('itemIdInput').value = '';
             displayItems();
-
         }
     }
 
@@ -30,10 +29,15 @@ function uploadItems(){
 }
 
 function displayItems(){
-
-
-    document.getElementById("brick-list").innerHTML +=  "<li>" + tempItems[tempLenght] + "</li>";   
+    document.getElementById("brick-list").innerHTML +=  "<li class='brickListItem' id=listItem"+tempLenght+">" + tempItems[tempLenght] + "<div class='removeBtn' onclick='removeListItem("+tempLenght+")'>x</div></li>";   
     tempLenght++;
+}
+
+function removeListItem(id){
+    console.log("listItem"+id);
+    document.getElementById("listItem"+id).style.display="none";
+    tempItems.splice(id,1);
+    console.log(tempItems);
 }
 
 
