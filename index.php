@@ -26,6 +26,7 @@ $_SESSION["items"];
         <div class="content">
             <div class="search">
                 <h2>Add lego brick</h2>
+                <h2>hej</h2>
                 <div class="form">
                     <input onkeypress="addItem()"id="itemIdInput"name="itemId" type="text"/>
                     <button onclick="addItemClick()">Add item</button>
