@@ -1,28 +1,27 @@
 <?php
 session_start();
-//include("../conn.php");
+include("../conn.php");
 
 //WARNING!!!!
 //ADD mysql_real_escape_string() or OTHER similar method
 $searchKeys = $_POST["key"];
 
 $keyWords = explode(",", $searchKeys);
-
 var_dump($keyWords);
+$query = "SELECT setName FROM sets JOIN inventory ON sets.setID = inventory.setID";
 
-$query = "SELECT * FROM parts";
+$data = array($keyWords[0]);
 
-$resultString = filter_input(INPUT_GET, "results", FILTER_SANITIZE_SPECIAL_CHARS);
-$resultArray = explode(";", $resultString);
-$upperBound = count($resultArray) - 1;
-$query = "SELECT inventory.SetID, 
-sets.Year, sets.Setname FROM inventory,
-sets WHERE sets.SetID=inventory.SetID AND ItemTypeID='P'
-AND inventory.ColorID='4' AND (";
-for ($i = 0; $i < count($resultArray) - 1; $i++) {
-    $query .= "ItemID='$resultArray[$i]'";
-    $query .= " OR ";
-}
-$query .= "ItemID='$resultArray[$upperBound]')";
-var_dump($query);
+$resultArray = runQuery($query, true, array($keyWords[0]));
 var_dump($resultArray);
+
+
+/*
+Visa alla satser som innehåller eftersökta bitar  
+
+SELECT setName FROM sets JOIN ON sets.setID = inventory.itemID WHERE sets.setID LIKE '%".$keyWords[0]."%';
+SELECT setName FROM sets WHERE setName LIKE '%".$keyWords[0]."%';
+SELECT Setname FROM sets JOIN sets.SetID = inventory.ItemID WHERE inventory.ItemID LIKE cat;
+SELECT Setname FROM sets JOIN inventory ON sets.SetID = inventory.SetID WHERE inventory.ItemID = ;
+SELECT Partname FROM parts JOIN inventory JOIN sets ON sets.SetID = inventory.SetID WHERE inventory.ItemID = 4056;
+*/
