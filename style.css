@@ -13,6 +13,8 @@ body{
     margin:0px;
     width: 100%;
     height: 100vh;
+    background-image: linear-gradient( #284280, #E5EFF7);
+
 }
 /***************
 OTHER
@@ -24,14 +26,37 @@ OTHER
 
     width: 100%;
     height: 100%
+     
 }
-
 .header{
     display: flex;
     justify-content: space-around;
     position: fixed;
+    float: right;
     width: 100%;
+    height: 10vh;
+    background-color: #284280;
+    border-bottom: solid white;
+    align-items: center;
 
+}
+.menubutton{
+    color: #B3E2F0;
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding-top: 4vh;
+    cursor: pointer;
+    border: 2px solid #B3E2F0;
+    border-color: #B3E2F0;
+    padding: 3px 5px;
+    cursor: pointer;
+    border-radius: 8px;
+    height: 20%;
+   
 }
 
 .content{
@@ -83,3 +108,4 @@ OTHER
 .removeBtn{
     
 }
+

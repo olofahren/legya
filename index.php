@@ -16,13 +16,8 @@ $_SESSION["items"];
 </head>
 <body>
     <div class="wrapper">
-        <div class="header">
-            <img src="" alt="logo" class="logo">
-            <ul class="menu">
-                <li>Home</li>
-                <li>About</li>
-            </ul>
-        </div>
+       <?php include("menu.html");
+       ?>
         <div class="content">
             <div class="search">
                 <h2>Add lego brick</h2>
