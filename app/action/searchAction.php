@@ -1,6 +1,6 @@
 <?php
 session_start();
-//include("../conn.php");
+include("../conn.php");
 
 //WARNING!!!!
 //ADD mysql_real_escape_string() or OTHER similar method
