@@ -18,6 +18,7 @@ $_SESSION["items"];
 <div class="wrapper">
        <?php include("menu.html");
        ?>
+       <div class="content">
        <div class="about_content">
               <h1> ABOUT LEGYA</h1>
               <p> Legya was created by four students at Linköpings University in 2019. The website's purpose is to help people find which set their lego pieces belong to!!!  </p>
@@ -25,10 +26,10 @@ $_SESSION["items"];
               <h2> How to search in LEGYA </h2>
               <p> Write the part-ID in the search box. Press "add item" to add the piece to a list. Repeat the process until you have added everything to list. 
               Then, press the search button to move to the next step. </p>
-              <br />
+
               <p>Your parts will then be sorted into which set they belong to. You can click on each set to read more.</p>
-             
-       </div>       
+       </div>
+       </div>
 </div>
 
 

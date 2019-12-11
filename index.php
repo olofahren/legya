@@ -29,7 +29,7 @@ $_SESSION["items"];
                     <form action="app/action/searchAction.php" method="POST" onsubmit="uploadItems();">
                         <div>
                             <input type="hidden" id="searchField" name="key" value="">
-                            <input type="submit" value="Search">
+                            <input type="submit" value="Search" class="search.function">
                         </div>
                     </form>
             </div>
