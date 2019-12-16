@@ -20,7 +20,7 @@ session_start();
        ?>
     <div class="content results">
     
-    <div class="box1">
+    <div class="lego-container">
     <?php 
     foreach ($_SESSION["results"] as $result) {
         
@@ -39,14 +39,15 @@ session_start();
             </div>
             <div class="lego-info">
                 <h4 class="setName"><?php $result["Setname"]?></h4>
-                <p class="info">
-                <p>Setname:</p>
-                    <?php echo $result["Setname"]?>
-                </p>
-                <div class="more-info">
-                    <h5><a href="next2.php"> More info </a></h5>
-                </div>
+                <h5 class="set-title">Setname:</h5>
+                    <p><?php echo $result["Setname"]?></p>
+                <h5 class="set-title">Release year:</h5>
+                    <p><?php echo $result["Year"] ?></p>
+            
             </div>
+            <div class="more-info">
+                    <h5><a href="app/action/getParts.php?SetID=<?php echo $result["SetID"]?>"> More info </a></h5>
+                </div>
         </div>
 
 
