@@ -23,14 +23,11 @@ $_SESSION["items"];
                 <h2>Add lego brick</h2>
                 
                 <div class="form">
-                    <input onkeypress="addItem()"id="itemIdInput"name="itemId" type="text"/>
-                    <button onclick="addItemClick()">Add item</button>
-        
-                    <form action="app/action/searchAction.php" method="POST" onsubmit="uploadItems();">
-                        <div>
-                            <input type="hidden" id="searchField" name="key" value="">
+                    <form action="app/action/searchAction.php" method="POST">
+                        
+                            <input type="text" id="searchField" name="key" value="">
                             <input type="submit" value="Search" class="search.function">
-                        </div>
+                    
                     </form>
             </div>
             <div class="list-container">

@@ -1,6 +1,6 @@
 <?php
 session_start();
-$_SESSION["items"];
+
 ?>
 
 <!DOCTYPE html>
@@ -21,27 +21,41 @@ $_SESSION["items"];
     <div class="content results">
     
     <div class="box1">
+    <?php 
+    foreach ($_SESSION["results"] as $result) {
+        
+    
+    ?>
+
+    
         <div class="lego-box">
             <div class="lego-pic-container">
-                <img src="lego-city.jpg" alt="image" class="lego-pic">
+
+            <!-- FIXA HANTERING AV .gif OBS, ENDAST JPG FUNKAR JUST NU -->
+                <img src="http://weber.itn.liu.se/~stegu76/img.bricklink.com/SL/<?php echo $result["SetID"]?>.jpg" alt="set-image" class="lego-pic">
+            
+  
+            
             </div>
             <div class="lego-info">
-                <h4 class="setName">Lego city</h4>
+                <h4 class="setName"><?php $result["Setname"]?></h4>
                 <p class="info">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                <p>Setname:</p>
+                    <?php echo $result["Setname"]?>
                 </p>
                 <div class="more-info">
                     <h5><a href="next2.php"> More info </a></h5>
                 </div>
             </div>
         </div>
-        <div class="lego-box"></div>
+
+
+       <?php  
+       
+        }
+       ?>
     </div>
 
-    <div class="box2">
-        <div class="lego-box"></div>
-        <div class="lego-box"></div>
-    </div>
     
 
 

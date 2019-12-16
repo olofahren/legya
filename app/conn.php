@@ -18,14 +18,6 @@ try {
     echo 'Kunde inte koppla mot db.<br>'.$e->getMessage();
     exit;
 }
-/*
- * Sends a request to database and returns an answer if $fetch = true.
- *
- * @param, string, $query, the request sent to database
- * @param, boolean, $fetch, indicates if the function should return data or not
- * @param, array, $data, data sent into the query
- * @return, array, returns the answer from database - only returns if $fetch = true
- */
 
      function runQuery($query, $fetch = true, array $data)
      {
