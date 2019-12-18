@@ -71,7 +71,7 @@ if ($_GET["key"]) {
             
             <div class="search">
             <img class="airplane" src="https://img.pngio.com/archives-aircraft-cirrus-aircraft-propeller-plane-side-png-750_398.png" alt="">
-                <h2>Search </h2>
+                <h2 class="search_text">LEGYA </h2>
                 <div class="form">
                     <form method="GET" action="">
                             <input type="text" id="searchField" name="key">
