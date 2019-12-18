@@ -65,6 +65,7 @@ OTHER
     justify-content: center;
     align-items: center;
     height: 100%;
+    flex-direction: column;
 }
 .about_content{
     display: flex;
@@ -141,6 +142,7 @@ padding: 3%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    overflow: scroll;
 
 }
 

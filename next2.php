@@ -19,6 +19,7 @@ session_start();
     <div class="wrapper">
         <?php include("menu.html");
        ?>
+            
         <div class="results">
             <h1>Parts in <?php echo $_GET["SetID"]?></h1>
             <div class="box1">
@@ -31,7 +32,7 @@ session_start();
          </tr>
                 <?php foreach ($_SESSION["setParts"] as $part) {
         ?>
-            <tr>
+            <tr>    
                 <td><?= $part['Quantity']?></td>
                 <td ><img class="legoImg" src="http://weber.itn.liu.se/~stegu76/img.bricklink.com/<?= $part['ItemTypeID']?>/<?= $part['ColorID']?>/<?= $part['ItemID']?>" alt="part image"></td>
                 <td><?= $part['Colorname']?></td>

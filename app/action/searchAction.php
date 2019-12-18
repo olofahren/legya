@@ -1,18 +1,17 @@
 <?php
 session_start();
-include("../conn.php");
+include("app/conn.php");
 
-//LÄGG TILL RENSNING AV INPUT
 
-$searchKey = $_POST["key"];
-$searchKey = filter_input(INPUT_POST, "key", FILTER_SANITIZE_SPECIAL_CHARS);
-var_dump($searchKey);
+if ($_GET["limit"]) {
+    $limit = filter_input(INPUT_GET, "limit", FILTER_SANITIZE_SPECIAL_CHARS);
+}
+else{
+    $limit = 20;    
+}
+$searchKey = filter_input(INPUT_GET, "key", FILTER_SANITIZE_SPECIAL_CHARS);
 
-$query = "SELECT * FROM sets WHERE Setname LIKE '%$searchKey%'";
+$query = "SELECT * FROM sets WHERE Setname LIKE '%$searchKey%' LIMIT $limit";
 $data = array($searchKey);
 
-var_dump($data);
-var_dump($query);
-$_SESSION["results"] = runQuery($query, true, $data);
-
-header("Location: ../../next.php");
+$results= runQuery($query, true, $data);

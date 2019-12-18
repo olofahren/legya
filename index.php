@@ -1,6 +1,10 @@
 <?php
 session_start();
-$_SESSION["items"];
+
+if ($_GET["key"]) {
+    include("app/action/searchAction.php");
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -20,22 +24,23 @@ $_SESSION["items"];
        ?>
         <div class="content">
             <div class="search">
-                <h2>Add lego brick</h2>
+                <h2>Search </h2>
                 
                 <div class="form">
-                    <form action="app/action/searchAction.php" method="POST">
-                        
-                            <input type="text" id="searchField" name="key" value="">
+                    <form method="GET" action="">
+                            <input type="text" id="searchField" name="key">
                             <input type="submit" value="Search" class="search.function">
-                    
                     </form>
-            </div>
-            <div class="list-container">
-                <ul id="brick-list">
-
-                </ul>
-            </div>
+                </div>
+            
+ 
         </div>
+        <?php
+            if ($_GET["key"]) {
+                include("app/action/displayResults.php");
+            }
+            
+            ?>   
     </div>
 
     <script src="script.js"></script>

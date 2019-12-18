@@ -35,5 +35,3 @@ try {
              exit;
          }
      }
-
-$filterDelete = filter_input(INPUT_GET, 'search', FILTER_SANITIZE_SPECIAL_CHARS);

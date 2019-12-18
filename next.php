@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+include("app/action/searchAction.php");
 ?>
 
 <!DOCTYPE html>
@@ -18,11 +18,20 @@ session_start();
 <div class="wrapper">
        <?php include("menu.html");
        ?>
+
+<div class="sorting">
+                <div class="select-display-amount" >
+                    <form method="GET">
+                        <input type="number" name="limit">
+                        <input type="submit" value="Limit results">
+                    </form>
+                </div>
+            </div>
     <div class="content results">
     
     <div class="lego-container">
     <?php 
-    foreach ($_SESSION["results"] as $result) {
+    foreach ($results as $result) {
         
     
     ?>
@@ -30,12 +39,8 @@ session_start();
     
         <div class="lego-box">
             <div class="lego-pic-container">
-
             <!-- FIXA HANTERING AV .gif OBS, ENDAST JPG FUNKAR JUST NU -->
-                <img src="http://weber.itn.liu.se/~stegu76/img.bricklink.com/SL/<?php echo $result["SetID"]?>.jpg" alt="set-image" class="lego-pic">
-            
-  
-            
+                <img src="http://weber.itn.liu.se/~stegu76/img.bricklink.com/SL/<?php echo $result["SetID"]?>.jpg" alt="set-image" class="lego-pic">          
             </div>
             <div class="lego-info">
                 <h4 class="setName"><?php $result["Setname"]?></h4>
@@ -46,13 +51,10 @@ session_start();
             
             </div>
             <div class="more-info">
-                    <h5><a href="app/action/getParts.php?SetID=<?php echo $result["SetID"]?>"> More info </a></h5>
-                </div>
+                <h5><a href="app/action/getParts.php?SetID=<?php echo $result["SetID"]?>"> More info </a></h5>
+            </div>
         </div>
-
-
        <?php  
-       
         }
        ?>
     </div>
