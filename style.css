@@ -211,27 +211,70 @@ padding: 3%;
 @keyframes slideInFromLeft {
     0% {
         right: 0;
+        transform: rotate(20deg);
+        transform: scaleX(-1);
+    }
+
+    50%{
+        transform: rotate(0deg);
+        top: 15%;
+        transform: scaleX(-1);
     }
     100% {
+        transform: rotate(-20deg);
         right: 100%;
+        transform: scaleX(-1);
     }
 }
 
-@keyframes slideInFromRight {
+
+@keyframes cloud {
     0% {
         left: 0;
+
     }
     100% {
         left: 100%;
+
     }
 }
+@keyframes cloud2 {
+    0% {
+        right: 0;
+
+    }
+    100% {
+        right: 100%;
+
+    }
+}
+
+
 .airplane{
+    top: 50%;
     z-index: -1;
     position: absolute;
     height: 5vh;
-    animation: 10s slideInFromLeft;
+    animation: 30s slideInFromLeft;
     animation-iteration-count:infinite;
     animation-timing-function: linear;
+    transform: scaleX(-1);
+}
+
+.cloud, .cloud2{
+    z-index: -2;
+    position: absolute;
+    height: 20vh;
+    animation: 60s cloud;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+}
+
+.cloud2{
+    animation: 60s cloud2;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+    top: 25%;
 }
 
 
