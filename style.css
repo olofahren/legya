@@ -15,7 +15,9 @@ li{
 body{
     margin:0px;
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    
+    
     background-image: repeating-linear-gradient( #284280, #E5EFF7);
     background-repeat: no-repeat;
 
@@ -28,7 +30,9 @@ OTHER
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100%  
+    height: 100%;
+    overflow: auto;
+    
 }
 .header{
     display: flex;
@@ -191,10 +195,50 @@ padding: 3%;
     margin-bottom: 0px;
 }
 
+.sorting{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2%;
+}
+
+.footer{
+    height: 30vh;
+    background-image: url("https://gallery.yopriceville.com/var/resizes/Free-Clipart-Pictures/Grass-Grounds-Coverings-PNG-Clipart/Mountain_and_Meadow_Ground_PNG_Cartoon_Image.png?m=1530032543");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        right: 0;
+    }
+    100% {
+        right: 100%;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: 100%;
+    }
+}
+.airplane{
+    z-index: -1;
+    position: absolute;
+    height: 5vh;
+    animation: 10s slideInFromLeft;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+}
+
+
 
 /*************************************************************
 //NEXTNEXT2
-***********************************************/
+**************************************************************/
 
 .part-box{
     width: 100%;
@@ -217,3 +261,4 @@ padding: 3%;
     
 
 }
+

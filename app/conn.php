@@ -22,7 +22,6 @@ try {
      function runQuery($query, $fetch = true, array $data)
      {
          global $dbm;
-         var_dump($query);
          try {
              $stmt = $dbm->prepare($query);
              $stmt->execute($data);

@@ -34,6 +34,7 @@ if ($_GET["key"]) {
                         <input type="submit" value="Limit results">
                     </form>
                 </div>
+        
 
         <!-- SORT BY -->
                 <div class="sort">
@@ -64,10 +65,13 @@ if ($_GET["key"]) {
                     </form>
                 </div>
 
+        </div>
+
         <div class="content">
+            
             <div class="search">
+            <img class="airplane" src="https://img.pngio.com/archives-aircraft-cirrus-aircraft-propeller-plane-side-png-750_398.png" alt="">
                 <h2>Search </h2>
-                
                 <div class="form">
                     <form method="GET" action="">
                             <input type="text" id="searchField" name="key">
@@ -83,6 +87,10 @@ if ($_GET["key"]) {
             }
             
             ?>   
+    </div>
+
+    <div class="footer">
+        
     </div>
 
     <script src="script.js"></script>

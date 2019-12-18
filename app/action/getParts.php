@@ -11,5 +11,4 @@ $data = array($SetID);
 
 $_SESSION["setParts"] = runQuery($query, true, $data);
 
-// var_dump($_SESSION["setParts"]);
 header("Location: ../../next2.php?SetID=$SetID");
