@@ -33,7 +33,7 @@ if ($_GET["key"]) {
             <img class="airplane" src="https://ideascdn.lego.com/media/generate/lego_ci/7b115add-2662-4114-b611-2786e9045efd/resize:800:450" alt="">
             <img src="http://www2.leaseweb.com/rs/326-LAN-349/images/Hybrid_lego_2.png" alt="" class="cloud">
             <img src="http://www2.leaseweb.com/rs/326-LAN-349/images/Hybrid_lego_2.png" alt="" class="cloud2">
-                <h2>Search</h2>
+                <h2 class="search-text">LEGYA</h2>
                 <div class="form">
                     <form method="GET" action="">
                             <input type="text" id="searchField" name="key">

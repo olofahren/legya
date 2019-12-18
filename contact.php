@@ -22,46 +22,11 @@ $_SESSION["items"];
        ?>
        <div class="content">
         <div class="about_content">
-            <h1> Contact</h1>
-            <p> To contact LEGYA please see information below. </p>
-
-            <h2>Telephone times: </h2>
-
-            <table>
-                <tr>
-                    <th>Day</th>
-                    <th>Time</th>
-
-                </tr>
-                <tr>
-                    <td>Mon-fri: </td>
-                    <td>08:00-17:00</td>
-                </tr>
-                <tr>
-                    <td>Sat: </td>
-                    <td>09:00-15:00</td>
-                </tr>
-                <tr>
-                    <td>Sun: </td>
-                    <td>Not availabe</td>
-                </tr>
-
-            </table>
-
-
-            <h2> Contact information </h2>
-            <table>
-
-                <tr>
-                    <td>Email:</td>
-                    <td>lolaaaa12@yahoo.com</td>
-                </tr>
-                <tr>
-                    <td>Phone:</td>
-                    <td>07012345678</td>
-                </tr>
-            </table>
-
+            <h1> About LEGYA</h1>
+           <p>This website was created by four students at Linköping University, Campus Norrköping, in the course Electronic Publishing TNMK30. 
+              The purpose of this website is to search for legosets and find more information about which parts that belong to the set.</p>
+              <img src="gubbs.jpg" alt="Logo" width="600px">
+              Cindy, Rebecca, Olof, Jane
         </div>
         </div>
     </div>
