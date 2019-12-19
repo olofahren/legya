@@ -18,7 +18,7 @@ $_SESSION["items"];
 <div class="wrapper">
        <?php include("menu.html");
        ?>
-       <div class="content">
+       <div class="content"> 
        <div class="about_content">
               <h1> How to search</h1>
               <p> On this website you can search for legosets and find more information about which parts belong to the set.</p>
@@ -28,11 +28,11 @@ $_SESSION["items"];
               <li>Write keyword or setname in the search box.</li>
               <li>Press the searchbutton to search for sets.</li>
               <li>Choose which set you would like to read more about.</li>
-              </ul>
+              </ul> 
 
              
        </div>
-       </div>
+       </div> 
 </div>
 
 

@@ -24,7 +24,7 @@ $_SESSION["items"];
         <div class="about_content">
             <h1> About LEGYA</h1>
            <p>This website was created by four students at Linköping University, Campus Norrköping, in the course Electronic Publishing TNMK30. 
-              The purpose of this website is to search for legosets and find more information about which parts that belong to the set.</p>
+              The purpose of this website is to search for legosets and find more information about which parts that belong to the set. </p>
               <img src="gubbs.jpg" alt="Logo" width="600px">
               Cindy, Rebecca, Olof, Jane
         </div>
