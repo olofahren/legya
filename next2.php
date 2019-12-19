@@ -30,6 +30,7 @@ session_start();
             <th>Color</th>
             <th>Part name</th>
          </tr>
+         <!-- CHANGE FROM SESSION TO OTHER METHOD? -->
                 <?php foreach ($_SESSION["setParts"] as $part) {
         ?>
             <tr>    
@@ -40,7 +41,6 @@ session_start();
             </tr>
             <?php }?>
         </table>
-
             </div>
         </div>
     </div>

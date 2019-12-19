@@ -27,7 +27,7 @@ else{
 
 $searchKey = filter_input(INPUT_GET, "key", FILTER_SANITIZE_SPECIAL_CHARS);
 
-$query = "SELECT * FROM sets WHERE Setname LIKE '%$searchKey%' ORDER BY $sort $order LIMIT $limit ";
+$query = "SELECT * FROM sets  WHERE Setname LIKE '%$searchKey%' ORDER BY $sort $order LIMIT $limit ";
 $data = array($searchKey);
 
 $results= runQuery($query, true, $data);

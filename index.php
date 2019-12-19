@@ -48,6 +48,12 @@ if ($_GET["key"]) {
                 include("app/action/displayResults.php");
             }
             
+            
+            if (!$results && $_GET["key"]) {
+            echo "<h3>Sorry, no results were returned by your search. Try again with another keyword.<h3>";
+            }
+
+            
             ?>   
     </div>
 

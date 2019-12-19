@@ -1,3 +1,7 @@
+<?php 
+
+?>
+
 <div class="sorting">
 
        <!-- LIMIT -->
