@@ -3,14 +3,17 @@ GENERAL RULES
 ****************/
 
 
-h1, h2, h3, h4,h5, li, td, tr{
-   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+h1, h2, h3, h4,h5, li, td, tr, p{
+    font-family: 'PT Sans Narrow', sans-serif;   
 }
 
 .search-text{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 30px;
-    color: orange;
+    /*font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+    */font-size: 30px;
+    color: white;
+    text-align: center;
+    font-size: 5vw;
 }
 
 li{
@@ -23,6 +26,7 @@ body{
     min-height: 100%;
     background-image: repeating-linear-gradient( #284280, #E5EFF7);
     background-repeat: no-repeat;
+    height: 100%;
 
 }
 
@@ -43,10 +47,9 @@ OTHER
     overflow: auto;
     
 }
-.header{
+.header-large{
     display: flex;
     justify-content: space-around;
-
     float: right;
     width: 100%;
     background-color: #284280;
@@ -77,7 +80,6 @@ OTHER
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100%;
     flex-direction: column;
     
 }
@@ -103,6 +105,38 @@ OTHER
     width: 100%;
     height: 50vh;
     max-height: 50vh;
+}
+
+.search-form{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    height: 5vh;
+}
+
+.search-form form{
+    width: 100%;
+}
+
+#search-field{
+    border-radius: 20px 0px 0px 20px;
+    width: 80%;
+    border: none;
+    font-size: 20pt;
+    padding: 1%;
+    background-color: #B3E2F0;
+    color: white;
+    
+}
+
+.search-btn{
+    border-radius: 0px 20px 20px 0px;
+    border:none;
+    height: 100%;
+    background-color: #B3E2F0;
+    font-size: larger;
+    text-align: center;
+    padding-left: 5%;
 }
 
 .search-button
@@ -176,6 +210,7 @@ padding: 3%;
     display: flex;
     justify-content: center;
     max-width: 100%;
+    overflow: hidden;
 }
 .lego-pic{
     max-height: 100%;
@@ -213,10 +248,10 @@ padding: 3%;
 
 .footer{
     height: 30vh;
-    background-image: url("https://gallery.yopriceville.com/var/resizes/Free-Clipart-Pictures/Grass-Grounds-Coverings-PNG-Clipart/Mountain_and_Meadow_Ground_PNG_Cartoon_Image.png?m=1530032543");
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-top: 112px;
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    z-index: -2;
 
 }
 
@@ -288,6 +323,40 @@ padding: 3%;
     animation-iteration-count:infinite;
     animation-timing-function: linear;
     top: 25%;
+}
+
+#header-small{
+    display: none;
+    justify-content: space-around;
+    flex-direction: column;
+    float: right;
+    width: 100%;
+    background-color: #284280;
+    border-bottom: solid white;
+    align-items: center;
+}
+
+.menu-icon div{
+    width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+}
+
+@media only screen and (max-width: 600px) {
+    #header-small{
+        display: flex;
+    }   
+    #header-large{
+        display: none;
+    }
+
+    .wrapper{
+        display: flex;
+        flex-direction: row;
+    }
+
+
 }
 
 

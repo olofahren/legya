@@ -37,6 +37,9 @@ session_start();
                 <td ><img class="legoImg" src="http://weber.itn.liu.se/~stegu76/img.bricklink.com/<?= $part['ItemTypeID']?>/<?= $part['ColorID']?>/<?= $part['ItemID']?>" alt="part image"></td>
                 <td><?= $part['Colorname']?></td>
                 <td><?= $part['Partname']?></td>
+                <td><?= $part['MinifigID']?></td>
+                <td><?= $part['ColorID']?></td>
+                <td><?= $part['ItemID']?></td>
             </tr>
             <?php }?>
         </table>
