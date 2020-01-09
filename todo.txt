@@ -12,4 +12,4 @@ Add retention of sorting selection on page reload
 
 Add error message when no results are displayed
 
-Add minifigures in parts of set
+white space trim in search

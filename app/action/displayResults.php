@@ -1,5 +1,8 @@
 <div class="lego-container">
     <?php 
+    if(!$results){
+        echo "<h2>Your search did not return any results</h2>";
+    }
     foreach ($results as $result) {
         
     
@@ -8,7 +11,6 @@
     
         <div class="lego-box">
             <div class="lego-pic-container">
-            <!-- FIXA HANTERING AV .gif OBS, ENDAST JPG FUNKAR JUST NU -->
                 <img src="http://weber.itn.liu.se/~stegu76/img.bricklink.com/SL/<?php echo $result["SetID"]?>.jpg" alt="set-image" class="lego-pic">          
             </div>
             <div class="lego-info">

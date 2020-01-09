@@ -23,13 +23,7 @@ if ($_GET["key"]) {
     <div class="wrapper">
         <div class="main">
        <?php include("menu.html");?>
-        
-       <?php
-        if ($_GET["key"]) {
-            include("sort.php");
-        }
-       
-       ?>
+
        <div class="menu-icon" onclick="openNav()">
             <div></div>
             <div></div>
@@ -37,15 +31,17 @@ if ($_GET["key"]) {
         </div>
        
         <div class="content">
+        
             
             <div class="search">
+            <img src="assets/logg.png" alt="Logo" class="logo-small">
             <img class="airplane" src="https://ideascdn.lego.com/media/generate/lego_ci/7b115add-2662-4114-b611-2786e9045efd/resize:800:450" alt="">
             <img src="http://www2.leaseweb.com/rs/326-LAN-349/images/Hybrid_lego_2.png" alt="" class="cloud">
             <img src="http://www2.leaseweb.com/rs/326-LAN-349/images/Hybrid_lego_2.png" alt="" class="cloud2">
                 <h2 class="search-text">LEGYA</h2>
 
                     <form method="GET" action="" class="search-form">
-                            <input type="text" id="search-field" name="key">
+                            <input type="text" placeholder="Search for sets..." id="search-field" name="key" required>
                             <input type="submit" value="&#x1F50E" class="search-btn">
                     </form>
 
@@ -54,7 +50,11 @@ if ($_GET["key"]) {
         </div>
         <?php
             if ($_GET["key"]) {
+                include("sort.php");
                 include("app/action/displayResults.php");
+            }
+            else{
+                echo "<h2>Enter a search term to search for a lego set.";
             }
             
             ?>   

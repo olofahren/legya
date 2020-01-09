@@ -47,10 +47,13 @@ OTHER
     overflow: auto;
     
 }
-.header-large{
+
+.main{
+    width: 100%;
+}
+#header{
     display: flex;
     justify-content: space-around;
-    float: right;
     width: 100%;
     background-color: #284280;
     border-bottom: solid white;
@@ -122,10 +125,9 @@ OTHER
     border-radius: 20px 0px 0px 20px;
     width: 80%;
     border: none;
-    font-size: 20pt;
+    font-size: 15pt;
     padding: 1%;
     background-color: #B3E2F0;
-    color: white;
     
 }
 
@@ -191,7 +193,7 @@ padding: 3%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    overflow: scroll;
+    overflow: auto;
 
 }
 
@@ -278,21 +280,26 @@ padding: 3%;
 
 @keyframes cloud {
     0% {
-        left: 0;
+        top: 30%;
 
     }
+    50%{
+        top: 32%;
+    }
     100% {
-        left: 100%;
+        top: 30%;
 
     }
 }
 @keyframes cloud2 {
     0% {
-        right: 0;
-
+        top: 30%;
+    }
+    50%{
+        top: 32%;
     }
     100% {
-        right: 100%;
+        top: 30%;
 
     }
 }
@@ -309,31 +316,28 @@ padding: 3%;
     transform: scaleX(-1);
 }
 
-.cloud, .cloud2{
+.cloud{
     z-index: -2;
     position: absolute;
     height: 20vh;
-    animation: 60s cloud;
+    animation: 3s cloud;
     animation-iteration-count:infinite;
     animation-timing-function: linear;
+    left: 20%;
 }
 
 .cloud2{
-    animation: 60s cloud2;
+    position: absolute;
+    height: 20vh;
+    animation: 5s cloud2;
     animation-iteration-count:infinite;
     animation-timing-function: linear;
-    top: 25%;
+    right: 20%;
+    z-index: -2;
 }
 
-#header-small{
+.closeNav, .menu-icon{
     display: none;
-    justify-content: space-around;
-    flex-direction: column;
-    float: right;
-    width: 100%;
-    background-color: #284280;
-    border-bottom: solid white;
-    align-items: center;
 }
 
 .menu-icon div{
@@ -343,19 +347,72 @@ padding: 3%;
   margin: 6px 0;
 }
 
+.logo-small{
+    display: none;
+    justify-content: center;
+    margin: 0px;
+    
+}
+
 @media only screen and (max-width: 600px) {
-    #header-small{
-        display: flex;
-    }   
-    #header-large{
+    #header{
+        flex-direction: column;
+        height: 0%;
+        overflow: hidden;
+        transition: 0.2s;
+        position: absolute;
+    }
+
+    .menubutton{
+        width: 60%;
+        border: none;
+    }
+
+    .logo{
         display: none;
     }
+
+    .logo-small{
+        display: block;
+        height: auto;
+        width: 50%;
+    }
+    
+    .closeNav, .menu-icon{
+        display: block;
+    }
+
+    .closeNav{
+        border: orangered solid;
+        color: red;
+        border-radius: 100%;
+    }
+
 
     .wrapper{
         display: flex;
         flex-direction: row;
     }
 
+    .lego-container{
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;    
+    }
+
+    .lego-box{
+        width: 80%;
+        margin-right: 0px;
+    }
+
+    .cloud, .cloud2{
+        width: 30%;
+    }
+
+    #search-field{
+        
+    }
 
 }
 
