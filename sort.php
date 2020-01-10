@@ -3,10 +3,11 @@
        <!-- LIMIT -->
                 <div class="select-display-amount" >
                     <form method="GET"> 
-                        <input type="number" name="limit">
+                        <input type="number" name="limit" value="<?php echo $_GET["limit"]?>">
                         <input type="hidden" id="keyHidden" name="key" value="<?php echo $_GET["key"]?>">
                         <input type="hidden" id="orderHidden" name="order" value="<?php echo $_GET["order"]?>">
                         <input type="hidden" id="sortByHidden" name="sort-by" value="<?php echo $_GET["sort-by"]?>">
+
                         <input type="submit" value="Limit results">
                     </form>
                 </div>
@@ -16,8 +17,9 @@
                 <div class="sort">
                     <form method="GET">
                         <select name="sort">
-                            <option value="Setname">Alpabetical</option>
-                            <option value="Year">Release date</option>
+                            <option value="score"<?php if($_GET["sort"]=="score"){echo "selected";} ?>>Relevance</option>
+                            <option value="Setname" <?php if($_GET["sort"]=="Setname"){echo "selected";} ?>>Alpabetical</option>
+                            <option value="Year" <?php if($_GET["sort"]=="Year"){echo "selected";} ?>>Release date</option>
                         </select>
                         <input type="hidden" id="keyHidden" name="key" value="<?php echo $_GET["key"]?>">
                         <input type="hidden" id="limitHidden" name="limit" value="<?php echo $_GET["limit"]?>">
@@ -30,8 +32,8 @@
                 <div class="order">
                     <form method="GET">
                         <select name="order">
-                            <option value="desc">Descending</option>
-                            <option value="asc">Ascending</option>
+                            <option value="desc" <?php if($_GET["order"]=="desc"){echo "selected";} ?> >Descending</option>
+                            <option value="asc"<?php if($_GET["order"]=="asc"){echo "selected";} ?>>Ascending</option>
                         </select>
                         <input type="hidden" id="keyHidden" name="key" value="<?php echo $_GET["key"]?>">
                         <input type="hidden" id="limitHidden" name="limit" value="<?php echo $_GET["limit"]?>">

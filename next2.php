@@ -1,5 +1,6 @@
 <?php
 session_start();
+// var_dump($_SESSION['setParts']);
 ?>
 
 <!DOCTYPE html>
@@ -34,26 +35,18 @@ session_start();
                 ?>
                 <tr>    
                     <td><?= $part['Quantity']?></td>
-                    <td ><img class="legoImg" src="http://weber.itn.liu.se/~stegu76/img.bricklink.com/<?= $part['ItemTypeID']?>/<?= $part['ColorID']?>/<?= $part['ItemID']?>" alt="part image"></td>
+                    <?php if($part['ItemTypeID'] == 'P') { ?>
+                    <td ><img class="legoImg" src="http://weber.itn.liu.se/~stegu76/img.bricklink.com/P/<?= $part['ColorID']?>/<?= $part['ItemID']?>" alt="part image"></td>
+                    <?php } else {?>
+                    <td ><img class="legoImg" src="http://weber.itn.liu.se/~stegu76/img.bricklink.com/M/<?= $part['ItemID']?>" alt="part image"></td>
+                    <?php }?>
                     <td><?= $part['Colorname']?></td>
                     <td><?= $part['Partname']?></td>
-                    <td><?= $part['MinifigID']?></td>
                     <td><?= $part['ColorID']?></td>
                     <td><?= $part['ItemID']?></td>
                 </tr>
             <?php }?>
-            <?php foreach ($_SESSION["setGuys"] as $part) {
-                ?>
-                <tr>    
-                    <td><?= $part['Quantity']?></td>
-                    <td ><img class="legoImg" src="http://weber.itn.liu.se/~stegu76/img.bricklink.com/<?= $part['ItemTypeID']?>/<?= $part['ItemID']?>" alt="part image"></td>
-                    <td><?= $part['Colorname']?></td>
-                    <td><?= $part['Partname']?></td>
-                    <td><?= $part['MinifigID']?></td>
-                    <td><?= $part['ColorID']?></td>
-                    <td><?= $part['ItemID']?></td>
-                </tr>
-            <?php }?>
+            
         </table>
 
             </div>
