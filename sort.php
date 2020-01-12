@@ -3,7 +3,7 @@
        <!-- LIMIT -->
                 <div class="select-display-amount" >
                     <form method="GET"> 
-                        <input type="number" name="limit" value="<?php echo $_GET["limit"]?>">
+                        <input type="number" name="limit" min="0" value="<?php echo $_GET["limit"]?>">
                         <input type="hidden" id="keyHidden" name="key" value="<?php echo $_GET["key"]?>">
                         <input type="hidden" id="orderHidden" name="order" value="<?php echo $_GET["order"]?>">
                         <input type="hidden" id="sortByHidden" name="sort-by" value="<?php echo $_GET["sort-by"]?>">

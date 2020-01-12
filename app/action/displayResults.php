@@ -21,9 +21,9 @@
                     <p><?php echo $result["Year"] ?></p>
             
             </div>
-            <div class="more-info">
-                <h5><a href="app/action/getParts.php?SetID=<?php echo $result["SetID"]?>"> More info </a></h5>
-            </div>
+            
+            <a class="more-info" href="app/action/getParts.php?SetID=<?php echo $result["SetID"]?>"><h5> More info </h5></a>
+            
         </div>
        <?php  
         }

@@ -1,15 +1,4 @@
-change means of saving selected GETS, potentially through SESSION
-
-Redesign/change CSS
-
-Improve input methods for filters
-
-Preserve OPTION selections on page reload
 
 Hide sorting on no key
 
-Add retention of sorting selection on page reload
 
-Add error message when no results are displayed
-
-white space trim in search

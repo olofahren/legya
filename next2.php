@@ -18,20 +18,30 @@ session_start();
 
 <body>
     <div class="wrapper">
-        <?php include("menu.html");
+        <?php
+        include("menu.html");
+        include("mobile-header.html")
        ?>
-            
+        <button class ="back-btn" onclick="goBack()">Go Back</button>
         <div class="results">
             <h1>Parts in <?php echo $_GET["SetID"]?></h1>
             <div class="box1">
-                <table class="table">
+                <?php if($_SESSION["setParts"]){ 
+                echo "<table class='table'>
                     <tr>
                         <th>Quantity</th>
                         <th>Picture</th>
                         <th>Color</th>
                         <th>Part name</th>
                     </tr>
-                    <?php foreach ($_SESSION["setParts"] as $part) {
+                    ";
+                     
+                    }
+                    if(!$_SESSION["setParts"]){
+                        echo "<h2>No parts were found in this set!</h2>";
+                    }
+                    else{
+                    foreach ($_SESSION["setParts"] as $part) {
                 ?>
                 <tr>    
                     <td><?= $part['Quantity']?></td>
@@ -42,14 +52,14 @@ session_start();
                     <?php }?>
                     <td><?= $part['Colorname']?></td>
                     <td><?= $part['Partname']?></td>
-                    <td><?= $part['ColorID']?></td>
-                    <td><?= $part['ItemID']?></td>
                 </tr>
-            <?php }?>
+            <?php }
+            echo "</table>";
+        }?>
             
-        </table>
+        
 
-            </div>
+           
         </div>
     </div>
     </div>

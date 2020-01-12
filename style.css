@@ -55,6 +55,7 @@ OTHER
     display: flex;
     justify-content: space-around;
     width: 100%;
+    height: 10vh;
     background-color: #284280;
     border-bottom: solid white;
     align-items: center;
@@ -200,7 +201,7 @@ padding: 3%;
 .results{
     flex-direction: row;
     margin-top: 5vh;
-    overflow: scroll;
+    overflow-y: scroll;
     align-items: flex-start;
     padding: 3vw;
    
@@ -234,8 +235,9 @@ padding: 3%;
     width: 100%;
     display: flex;
     justify-content: center;
-    border-radius: 5%;
+    border-radius: 5px;
     cursor: pointer;
+    text-decoration: none;  
 }
 
 .set-title{
@@ -246,6 +248,12 @@ padding: 3%;
     display: flex;
     justify-content: space-evenly;
     padding: 2%;
+}
+
+.sorting form{
+    display: flex;
+    flex-direction: column;
+    padding-right: 2vw;
 }
 
 .footer{
@@ -343,7 +351,7 @@ padding: 3%;
 .menu-icon div{
     width: 35px;
   height: 5px;
-  background-color: black;
+  background-color: #B3E2F0;
   margin: 6px 0;
 }
 
@@ -354,6 +362,29 @@ padding: 3%;
     
 }
 
+.logo{
+    height: 5vh;
+}
+
+.mobile-header{
+    display: none;
+}
+
+.about_content img{
+    width: 100%;
+}
+
+.back-btn{
+    width: 30%;
+    height:10%;
+    font-size: large;
+    background-color: #284280;
+    border: solid white;
+    border-top: none;
+    border-left: none;
+    color: #B3E2F0;
+}
+
 @media only screen and (max-width: 600px) {
     #header{
         flex-direction: column;
@@ -361,6 +392,7 @@ padding: 3%;
         overflow: hidden;
         transition: 0.2s;
         position: absolute;
+        
     }
 
     .menubutton{
@@ -368,30 +400,43 @@ padding: 3%;
         border: none;
     }
 
+    .mobile-header{
+        display: flex;
+        width: 100%;
+        height: 10vh;
+        background-color:#284280;
+        justify-content: space-around;
+        flex-direction: row;
+        align-items:center;
+        border-bottom: white solid;
+    }
+
     .logo{
         display: none;
     }
 
     .logo-small{
+        width: 33%;
+
         display: block;
-        height: auto;
-        width: 50%;
+
     }
     
     .closeNav, .menu-icon{
         display: block;
-    }
+    }   
 
     .closeNav{
-        border: orangered solid;
-        color: red;
-        border-radius: 100%;
+        font-weight: bolder;
+        font-size: xx-large;
+        color: #cc0000;
+        border-radius: 50px;
     }
 
 
     .wrapper{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
     }
 
     .lego-container{
@@ -410,10 +455,17 @@ padding: 3%;
         width: 30%;
     }
 
-    #search-field{
-        
+    .sorting{
+        padding-bottom: 2vh;
+        flex-direction: column;
+        padding-right: 2vw;
     }
 
+    .sorting form{
+        padding-bottom: 2vh;
+    }
+    
+    
 }
 
 

@@ -16,12 +16,14 @@ $_SESSION["items"];
 </head>
 <body>
 <div class="wrapper">
-       <?php include("menu.html");
+<?php
+        include("menu.html");
+        include("mobile-header.html")
        ?>
        <div class="content"> 
        <div class="about_content">
               <h1> How to search</h1>
-              <p> On this website you can search for legosets and find more information about which parts belong to the set.</p>
+              <p> On this website you can search for legosets and find more information about which parts belong to the set. </p>
               <br/><br/>  
 
               <ul>
@@ -35,6 +37,6 @@ $_SESSION["items"];
        </div> 
 </div>
 
-
+<script src="script.js"></script>
 </body>
 </html>
