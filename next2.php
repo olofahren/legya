@@ -1,6 +1,5 @@
 <?php
 session_start();
-// var_dump($_SESSION['setParts']);
 ?>
 
 <!DOCTYPE html>
@@ -19,6 +18,7 @@ session_start();
 <body>
     <div class="wrapper">
         <?php
+        //Inkluderar meny och mobilmeny.
         include("menu.html");
         include("mobile-header.html")
        ?>
@@ -26,20 +26,22 @@ session_start();
         <div class="results">
             <h1>Parts in <?php echo $_GET["SetID"]?></h1>
             <div class="box1">
-                <?php if($_SESSION["setParts"]){ 
+                <?php 
+                //Om det finns delar i satsen visas rubrikerna upp       
+                if($_SESSION["setParts"]){ 
                 echo "<table class='table'>
                     <tr>
                         <th>Quantity</th>
                         <th>Picture</th>
                         <th>Color</th>
                         <th>Part name</th>
-                    </tr>
-                    ";
-                     
+                    </tr>";
                     }
+                    //Om det inte finns delar visas ett errormedelande upp.
                     if(!$_SESSION["setParts"]){
                         echo "<h2>No parts were found in this set!</h2>";
                     }
+                    //Om det finns delar i satsen visas dessa upp
                     else{
                     foreach ($_SESSION["setParts"] as $part) {
                 ?>
@@ -56,10 +58,6 @@ session_start();
             <?php }
             echo "</table>";
         }?>
-            
-        
-
-           
         </div>
     </div>
     </div>

@@ -1,4 +1,0 @@
-
-Hide sorting on no key
-
-

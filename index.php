@@ -22,6 +22,7 @@ if ($_GET["key"]) {
     <div class="wrapper">
         <div class="main">
        <?php
+    //    Inkluderar menyer, både för mobil och för desktop.
             include("menu.html");
             include("mobile-header.html");
        ?>
@@ -39,6 +40,7 @@ if ($_GET["key"]) {
                     </form>
         </div>
         <?php
+        // Om ett ett sökord finns visas sorteringsalternativen och resultaten
             if ($_GET["key"]) {
                 include("sort.php");
                 include("app/action/displayResults.php");

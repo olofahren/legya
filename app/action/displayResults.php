@@ -3,12 +3,9 @@
     if(!$results){
         echo "<h2>Your search did not return any results</h2>";
     }
+    //Visar resultaten av queryn 
     foreach ($results as $result) {
-        
-    
     ?>
-
-    
         <div class="lego-box">
             <div class="lego-pic-container">
                 <img src="http://weber.itn.liu.se/~stegu76/img.bricklink.com/SL/<?php echo $result["SetID"]?>.jpg" alt="set-image" class="lego-pic">          

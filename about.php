@@ -17,6 +17,7 @@ $_SESSION["items"];
 <body>
 <div class="wrapper">
 <?php
+       //Inkluderar meny och mobilmeny.
         include("menu.html");
         include("mobile-header.html")
        ?>

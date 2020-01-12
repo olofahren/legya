@@ -1,5 +1,4 @@
 <?php
-
 $host = 'mysql.itn.liu.se';
 $user = 'lego';
 $pass = '';
